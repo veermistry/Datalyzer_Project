@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:paddingLeft="16dp"
+    android:paddingTop="16dp"
+    android:paddingRight="16dp"
+    android:paddingBottom="16dp"
+    tools:context=".GeneralPage">
+
+    <TextView
+        android:id="@+id/toptext"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Does your data have one or two variables?"
+        android:textSize="20dp"
+        app:fontFamily="@font/montserrat" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="110dp"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/buttonone"
+            android:layout_width="67dp"
+            android:layout_height="67dp"
+            android:layout_marginStart="40dp"
+            android:layout_marginLeft="40dp"
+            android:layout_marginEnd="86dp"
+            android:layout_marginRight="86dp"
+            android:text="1"
+            app:layout_constraintBaseline_toBaselineOf="@+id/next"
+            app:layout_constraintEnd_toStartOf="@+id/submit"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <Button
+            android:id="@+id/buttontwo"
+            android:layout_width="67dp"
+            android:layout_height="67dp"
+            android:layout_marginStart="40dp"
+            android:layout_marginLeft="40dp"
+            android:layout_marginEnd="86dp"
+            android:layout_marginRight="86dp"
+            android:text="2"
+            app:layout_constraintBaseline_toBaselineOf="@+id/next"
+            app:layout_constraintEnd_toStartOf="@+id/submit"
+            app:layout_constraintStart_toStartOf="parent" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="54dp"
+        android:orientation="horizontal">
+
+        <EditText
+            android:id="@+id/x_values"
+            android:layout_width="120dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="40dp"
+            android:layout_marginLeft="40dp"
+            android:layout_marginEnd="66dp"
+            android:layout_marginRight="66dp"
+            android:ems="10"
+            android:hint="X value"
+            android:inputType="numberDecimal|numberSigned"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@+id/y_values"
+            app:layout_constraintEnd_toStartOf="@+id/y_values"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/y_values" />
+
+        <EditText
+            android:id="@+id/y_values"
+            android:layout_width="120dp"
+            android:layout_height="40dp"
+            android:layout_marginEnd="55dp"
+            android:layout_marginRight="55dp"
+            android:layout_marginBottom="82dp"
+            android:ems="10"
+            android:hint=" Y value"
+            android:inputType="numberDecimal|numberSigned"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@+id/next"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/x_values"
+            app:layout_constraintTop_toBottomOf="@+id/toptext" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="73dp"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/next"
+            android:layout_width="100dp"
+            android:layout_height="67dp"
+            android:layout_marginStart="40dp"
+            android:layout_marginLeft="40dp"
+            android:layout_marginEnd="86dp"
+            android:layout_marginRight="86dp"
+            android:text="NEXT"
+            app:layout_constraintBottom_toTopOf="@+id/submit"
+            app:layout_constraintEnd_toStartOf="@+id/buttontwo"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/y_values" />
+
+        <Button
+            android:id="@+id/submit"
+            android:layout_width="100dp"
+            android:layout_height="67dp"
+            android:layout_marginEnd="55dp"
+            android:layout_marginRight="55dp"
+            android:layout_marginBottom="153dp"
+            android:text="SUBMIT"
+            app:layout_constraintBottom_toTopOf="@+id/eqindic"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/buttonone"
+            app:layout_constraintTop_toBottomOf="@+id/next" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/eqindic"
+        android:layout_width="165dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginBottom="38dp"
+        android:text="Your current equation:"
+        app:fontFamily="@font/montserrat_bold"
+        app:layout_constraintBottom_toTopOf="@+id/equation"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/submit" />
+
+    <TextView
+        android:id="@+id/equation"
+        android:layout_width="307dp"
+        android:layout_height="187dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginBottom="47dp"
+        android:text="y ="
+        android:textSize="30dp"
+        app:fontFamily="@font/montserrat"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/eqindic" />
+
+    <TextView
+        android:id="@+id/MeanLineIndicator"
+        android:layout_width="376dp"
+        android:layout_height="128dp"
+        android:text="The value above is the predicted value, for there is no independent variable."
+        app:fontFamily="@font/montserrat" />
+
+</LinearLayout>

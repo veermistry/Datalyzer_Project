@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".HealthMenuActivity">
+
+    <TextView
+        android:id="@+id/Question"
+        android:layout_width="419dp"
+        android:layout_height="64dp"
+        android:text="WHAT WOULD YOU LIKE TO TRACK?"
+        android:textSize="23dp"
+        android:textColor="#AD882C"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="4dp" />
+
+    <Button
+        android:id="@+id/HRbutton"
+        android:layout_width="196dp"
+        android:layout_height="43dp"
+        android:background="#C9FFE300"
+        android:text="HEART RATE"
+        tools:layout_editor_absoluteX="159dp"
+        tools:layout_editor_absoluteY="98dp" />
+
+    <Button
+        android:id="@+id/HRbutton"
+        android:layout_width="197dp"
+        android:layout_height="42dp"
+        android:background="#C9FFE300"
+        android:text="CALORIES"
+        tools:layout_editor_absoluteX="159dp"
+        tools:layout_editor_absoluteY="248dp" />
+
+    <Button
+        android:id="@+id/otherbutton"
+        android:layout_width="197dp"
+        android:layout_height="42dp"
+        android:background="#C9FFE300"
+        android:text="other"
+        tools:layout_editor_absoluteX="159dp"
+        tools:layout_editor_absoluteY="405dp" />
+
+    <ImageView
+        android:id="@+id/heart"
+        android:layout_width="104dp"
+        android:layout_height="330dp"
+        tools:layout_editor_absoluteX="30dp"
+        tools:layout_editor_absoluteY="-41dp"
+        tools:src="@drawable/heart" />
+
+    <ImageView
+        android:id="@+id/cal"
+        android:layout_width="128dp"
+        android:layout_height="120dp"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="209dp"
+        tools:src="@drawable/bread" />
+
+    <ImageView
+        android:id="@+id/other"
+        android:layout_width="118dp"
+        android:layout_height="361dp"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="255dp"
+        tools:srcCompat="@drawable/datalyzer_logo" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
